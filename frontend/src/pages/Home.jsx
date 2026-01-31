@@ -51,19 +51,12 @@ export default function Home() {
       </section>
 
       {/* CONTACT INFO */}
-      <div className="text-center mt-16">
-  <p className="text-gray-700 mb-4">
-    For consultation or personal guidance, feel free to reach out.
-  </p>
-
-  <a
-    href="/contact"
-    className="text-saffron font-semibold hover:underline text-lg"
-  >
-    Contact Me →
-  </a>
-</div>
-
+      <div className="text-center mt-16 text-gray-700">
+        <p>
+          For consultation, please visit our contact page or contact us
+          directly at the center.
+        </p>
+      </div>
 
     </div>
   );
