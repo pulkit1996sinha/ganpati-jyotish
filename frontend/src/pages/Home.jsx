@@ -1,118 +1,101 @@
-import { Sparkles, Star, Sun } from "lucide-react";
-import { Link } from "react-router-dom";
-
+import { Star, Sparkles, Sun } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="bg-gradient-to-b from-yellow-50 to-white">
 
       {/* HERO */}
-      <section className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+      <section className="max-w-7xl mx-auto px-6 py-24 text-center">
+        <Sun className="mx-auto text-saffron mb-6" size={56} />
 
-        {/* LEFT */}
-        <div>
-          <h1 className="text-4xl md:text-5xl font-bold text-deep leading-tight">
-            Guidance Through <span className="text-saffron">Vedic Astrology</span>
-          </h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-deep">
+          Ganpati Jyotish Paramarsh Kendra
+        </h1>
 
-          <p className="mt-6 text-gray-700 text-lg">
-            At Ganpati Jyotish Paramarsh Kendra, we help you find clarity in
-            career, marriage, health, and life through authentic Jyotish
-            knowledge.
-          </p>
-
-          i<div className="mt-8 flex flex-col sm:flex-row gap-4">
-  <Link
-    to="/contact"
-    className="bg-saffron text-white px-6 py-3 rounded-lg shadow hover:scale-105 transition text-center"
-  >
-    Book Consultation
-  </Link>
-
-  <Link
-    to="/services"
-    className="border border-saffron text-saffron px-6 py-3 rounded-lg text-center"
-  >
-    View Services
-  </Link>
-</div>
-
-
-        </div>
-
-        {/* RIGHT CARD */}
-<div className="flex justify-center">
-  <div className="bg-white p-10 rounded-2xl shadow-xl text-center w-full max-w-md">
-
-    {/* VIEW SERVICES — TOP */}
-    <Link
-      to="/services"
-      className="
-        inline-block
-        mb-8
-        px-6 py-3
-        rounded-lg
-        border-2 border-saffron
-        text-saffron
-        font-semibold
-        hover:bg-saffron
-        hover:text-white
-        transition
-      "
-    >
-      View Services
-    </Link>
-
-    {/* SUN + TRUST TEXT */}
-    <Sun className="mx-auto text-saffron mb-4" size={48} />
-
-    <p className="text-lg font-semibold text-deep mb-8">
-      Trusted by families across Lucknow
-    </p>
-
-    {/* ICON ROW */}
-    <div className="flex justify-center gap-10 text-gray-700 mb-10">
-      <div className="flex flex-col items-center gap-1">
-        <Star className="text-saffron" />
-        <span>Accurate</span>
-      </div>
-
-      <div className="flex flex-col items-center gap-1">
-        <Sparkles className="text-saffron" />
-        <span>Spiritual</span>
-      </div>
-
-      <div className="flex flex-col items-center gap-1">
-        <Sun className="text-saffron" />
-        <span>Guidance</span>
-      </div>
-    </div>
-
-    {/* BOOK CONSULTATION — BOTTOM */}
-    <Link
-      to="/contact"
-      className="
-        block
-        w-full
-        px-6 py-4
-        rounded-xl
-        bg-saffron
-        text-white
-        font-bold
-        text-lg
-        shadow-md
-        hover:scale-105
-        transition
-      "
-    >
-      Book Consultation
-    </Link>
-
-  </div>
-</div>
-
-
+        <p className="mt-6 text-lg text-gray-700 max-w-2xl mx-auto">
+          Authentic Vedic astrology guidance for career, marriage,
+          health, and life decisions.
+        </p>
       </section>
+
+      {/* SERVICES */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <h2 className="text-3xl font-bold text-center text-deep mb-12">
+          Our Services
+        </h2>
+
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {[
+            "Kundali Analysis",
+            "Marriage Matching",
+            "Career Guidance",
+            "Vastu Consultation",
+            "Numerology",
+            "Horoscope Remedies"
+          ].map((service) => (
+            <div
+              key={service}
+              className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition text-center"
+            >
+              <Sparkles className="mx-auto text-saffron mb-4" />
+              <h3 className="text-xl font-semibold text-deep">
+                {service}
+              </h3>
+              <p className="mt-2 text-gray-600">
+                Personalized astrological solutions based on traditional
+                Jyotish principles.
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US */}
+      <section className="bg-yellow-100 py-20">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-deep mb-10">
+            Why Choose Us
+          </h2>
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <Star className="mx-auto text-saffron mb-3" />
+              <h4 className="font-semibold">Accurate Predictions</h4>
+              <p className="text-gray-700 mt-2">
+                Deep horoscope analysis with experience-based insights.
+              </p>
+            </div>
+
+            <div>
+              <Sparkles className="mx-auto text-saffron mb-3" />
+              <h4 className="font-semibold">Spiritual Guidance</h4>
+              <p className="text-gray-700 mt-2">
+                Balanced approach combining astrology and spirituality.
+              </p>
+            </div>
+
+            <div>
+              <Sun className="mx-auto text-saffron mb-3" />
+              <h4 className="font-semibold">Trusted Locally</h4>
+              <p className="text-gray-700 mt-2">
+                Serving families across Lucknow with trust and care.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT CTA */}
+      <section className="py-20 text-center">
+        <h2 className="text-3xl font-bold text-deep">
+          Contact for Consultation
+        </h2>
+
+        <p className="mt-4 text-gray-700">
+          Visit us or submit your consultation request through the contact page.
+        </p>
+      </section>
+
     </div>
   );
 }
