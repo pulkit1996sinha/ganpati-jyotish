@@ -1,4 +1,6 @@
 import { Sparkles, Star, Sun } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 export default function Home() {
   return (
@@ -19,15 +21,23 @@ export default function Home() {
             knowledge.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <button className="bg-saffron text-white px-6 py-3 rounded-lg shadow hover:scale-105 transition">
-              Book Consultation
-            </button>
+          i<div className="mt-8 flex flex-col sm:flex-row gap-4">
+  <Link
+    to="/contact"
+    className="bg-saffron text-white px-6 py-3 rounded-lg shadow hover:scale-105 transition text-center"
+  >
+    Book Consultation
+  </Link>
 
-            <button className="border border-saffron text-saffron px-6 py-3 rounded-lg">
-              View Services
-            </button>
-          </div>
+  <Link
+    to="/services"
+    className="border border-saffron text-saffron px-6 py-3 rounded-lg text-center"
+  >
+    View Services
+  </Link>
+</div>
+
+
         </div>
 
         {/* RIGHT */}
