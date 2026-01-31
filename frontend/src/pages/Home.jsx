@@ -96,6 +96,27 @@ export default function Home() {
         </p>
       </section>
 
+          <div className="text-center pb-20">
+  <a
+    href="/contact"
+    className="
+      inline-block
+      mt-6
+      px-8 py-4
+      rounded-xl
+      bg-saffron
+      text-white
+      font-semibold
+      text-lg
+      shadow-md
+      hover:scale-105
+      transition
+    "
+  >
+    Contact Me
+  </a>
+</div>
+
     </div>
   );
 }
