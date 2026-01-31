@@ -28,6 +28,12 @@ def get_db():
 def root():
     return {"status": "Ganpati Jyotish Backend Running"}
 
+@app.get("/contacts")
+def get_contacts(db: Session = Depends(get_db)):
+    contacts = db.query(Contact).all()
+    return contacts
+
+
 @app.post("/contact")
 def submit_contact(data: ContactCreate, db: Session = Depends(get_db)):
     contact = Contact(
