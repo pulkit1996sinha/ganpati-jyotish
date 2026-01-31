@@ -1,64 +1,124 @@
+import { Star, Sparkles, Sun } from "lucide-react";
+import { Link } from "react-router-dom";
+
+
 export default function Home() {
   return (
-    <div className="bg-yellow-50 min-h-screen">
+    <div className="bg-gradient-to-b from-yellow-50 to-white">
 
       {/* HERO */}
-      <section className="py-24 text-center px-6">
-        <h1 className="text-4xl font-bold text-deep mb-4">
+      <section className="max-w-7xl mx-auto px-6 py-24 text-center">
+        <Sun className="mx-auto text-saffron mb-6" size={56} />
+
+        <h1 className="text-4xl md:text-5xl font-bold text-deep">
           Ganpati Jyotish Paramarsh Kendra
         </h1>
 
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+        <p className="mt-6 text-lg text-gray-700 max-w-2xl mx-auto">
           Authentic Vedic astrology guidance for career, marriage,
           health, and life decisions.
         </p>
       </section>
 
-      {/* DIVIDER */}
-      <div className="w-24 h-1 bg-saffron mx-auto my-12 rounded-full" />
-
       {/* SERVICES */}
-      <section className="py-16 px-6">
-        <h2 className="text-3xl font-semibold text-center text-deep mb-10">
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <h2 className="text-3xl font-bold text-center text-deep mb-12">
           Our Services
         </h2>
 
-        <div className="max-w-3xl mx-auto space-y-4 text-center text-gray-800">
-          <p>• Kundali Analysis</p>
-          <p>• Marriage Matching</p>
-          <p>• Career Guidance</p>
-          <p>• Vastu Consultation</p>
-          <p>• Numerology</p>
-          <p>• Horoscope Remedies</p>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {[
+            "Kundali Analysis",
+            "Marriage Matching",
+            "Career Guidance",
+            "Vastu Consultation",
+            "Numerology",
+            "Horoscope Remedies"
+          ].map((service) => (
+            <div
+              key={service}
+              className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition text-center"
+            >
+              <Sparkles className="mx-auto text-saffron mb-4" />
+              <h3 className="text-xl font-semibold text-deep">
+                {service}
+              </h3>
+              <p className="mt-2 text-gray-600">
+                Personalized astrological solutions based on traditional
+                Jyotish principles.
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* DIVIDER */}
-      <div className="w-24 h-1 bg-saffron mx-auto my-12 rounded-full" />
+      {/* WHY CHOOSE US */}
+      <section className="bg-yellow-100 py-20">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-deep mb-10">
+            Why Choose Us
+          </h2>
 
-      {/* WHY */}
-      <section className="py-16 px-6 bg-yellow-100 text-center">
-        <h2 className="text-3xl font-semibold text-deep mb-8">
-          Why Choose Us
-        </h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <Star className="mx-auto text-saffron mb-3" />
+              <h4 className="font-semibold">Accurate Predictions</h4>
+              <p className="text-gray-700 mt-2">
+                Deep horoscope analysis with experience-based insights.
+              </p>
+            </div>
 
-        <p className="max-w-2xl mx-auto text-gray-700">
-          Trusted by families across Lucknow, we provide spiritual
-          guidance rooted in traditional Jyotish knowledge and years
-          of experience.
-        </p>
+            <div>
+              <Sparkles className="mx-auto text-saffron mb-3" />
+              <h4 className="font-semibold">Spiritual Guidance</h4>
+              <p className="text-gray-700 mt-2">
+                Balanced approach combining astrology and spirituality.
+              </p>
+            </div>
+
+            <div>
+              <Sun className="mx-auto text-saffron mb-3" />
+              <h4 className="font-semibold">Trusted Locally</h4>
+              <p className="text-gray-700 mt-2">
+                Serving families across Lucknow with trust and care.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* CONTACT */}
-      <section className="py-20 text-center px-6">
-        <h2 className="text-3xl font-semibold text-deep mb-4">
+      {/* CONTACT CTA */}
+      <section className="py-20 text-center">
+        <h2 className="text-3xl font-bold text-deep">
           Contact for Consultation
         </h2>
 
-        <p className="text-gray-700">
-          Please visit the contact page to submit your consultation request.
+        <p className="mt-4 text-gray-700">
+          Visit us or submit your consultation request through the contact page.
         </p>
       </section>
+
+          <div className="text-center pb-20">
+  <Link
+  to="/contact"
+  className="
+    inline-block
+    mt-6
+    px-8 py-4
+    rounded-xl
+    bg-saffron
+    text-white
+    font-semibold
+    text-lg
+    shadow-md
+    hover:scale-105
+    transition
+  "
+>
+  Contact Me
+</Link>
+
+</div>
 
     </div>
   );
