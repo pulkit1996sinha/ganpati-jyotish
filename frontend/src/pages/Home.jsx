@@ -1,4 +1,6 @@
 import { Star, Sparkles, Sun } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 export default function Home() {
   return (
@@ -97,24 +99,25 @@ export default function Home() {
       </section>
 
           <div className="text-center pb-20">
-  <a
-    href="/contact"
-    className="
-      inline-block
-      mt-6
-      px-8 py-4
-      rounded-xl
-      bg-saffron
-      text-white
-      font-semibold
-      text-lg
-      shadow-md
-      hover:scale-105
-      transition
-    "
-  >
-    Contact Me
-  </a>
+  <Link
+  to="/contact"
+  className="
+    inline-block
+    mt-6
+    px-8 py-4
+    rounded-xl
+    bg-saffron
+    text-white
+    font-semibold
+    text-lg
+    shadow-md
+    hover:scale-105
+    transition
+  "
+>
+  Contact Me
+</Link>
+
 </div>
 
     </div>
