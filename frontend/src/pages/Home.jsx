@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-b from-yellow-50 to-white">
+    <div className="bg-gradient-to-b from-yellow-100 via-yellow-50 to-white">
+
 
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-6 py-24 text-center">
