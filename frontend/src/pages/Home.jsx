@@ -7,27 +7,18 @@ export default function Home() {
     <div className="bg-gradient-to-b from-yellow-50 to-white">
 
       {/* HERO */}
-      <section className="bg-gradient-to-b from-yellow-100 via-yellow-50 to-white py-28">
-  <div className="max-w-6xl mx-auto px-6 text-center">
+      <section className="max-w-7xl mx-auto px-6 py-24 text-center">
+        <Sun className="mx-auto text-saffron mb-6" size={56} />
 
-    <span className="inline-block mb-6 px-6 py-2 rounded-full bg-yellow-200/60 text-deep font-medium">
-      🪔 Vedic Astrology Guidance
-    </span>
+        <h1 className="text-4xl md:text-5xl font-bold text-deep">
+          Ganpati Jyotish Paramarsh Kendra
+        </h1>
 
-    <h1 className="text-4xl md:text-5xl font-bold text-deep leading-tight">
-      Ganpati Jyotish <br />
-      <span className="text-saffron">Paramarsh Kendra</span>
-    </h1>
-
-    <div className="w-24 h-1 bg-saffron mx-auto my-8 rounded-full" />
-
-    <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-      Authentic astrology consultation helping families find clarity,
-      balance, and direction through traditional Jyotish wisdom.
-    </p>
-  </div>
-</section>
-
+        <p className="mt-6 text-lg text-gray-700 max-w-2xl mx-auto">
+          Authentic Vedic astrology guidance for career, marriage,
+          health, and life decisions.
+        </p>
+      </section>
 
       {/* SERVICES */}
       <section className="max-w-7xl mx-auto px-6 py-20">
@@ -35,8 +26,7 @@ export default function Home() {
           Our Services
         </h2>
 
-        <div className="bg-white rounded-2xl p-8 shadow-lg shadow-yellow-200/40">
-
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           {[
             "Kundali Analysis",
             "Marriage Matching",
