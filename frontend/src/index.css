@@ -1,3 +1,27 @@
+/* index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* This force-centers the main content of your pages */
+#root, .bg-gradient-to-b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* Ensures sections within your Home page take full width but keep text centered */
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Fixes the grid alignment for your Services cards */
+.grid {
+  display: grid;
+  justify-items: center;
+}
